@@ -1,6 +1,3 @@
-/**
- * Alipay.com Inc. Copyright (c) 2004-2018 All Rights Reserved.
- */
 package com.geckostroll.springtest;
 
 import com.geckostroll.springtest.pojo.Car;
@@ -20,7 +17,7 @@ import org.springframework.core.io.support.ResourcePatternResolver;
 public class BeanFactoryTest {
 
     @Test
-    public void test1() {
+    public void testGetBean() {
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         Resource res = resolver.getResource("classpath:beans.xml");
         BeanFactory beanFactory = new XmlBeanFactory(res);
@@ -32,6 +29,5 @@ public class BeanFactoryTest {
         Car anotherCar = beanFactory.getBean(Car.class);
         System.out.println(anotherCar);
         Assert.assertEquals(car, anotherCar);
-
     }
 }

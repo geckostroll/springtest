@@ -1,6 +1,3 @@
-/**
- * Alipay.com Inc. Copyright (c) 2004-2018 All Rights Reserved.
- */
 package com.geckostroll.springtest.pojo;
 
 import lombok.Getter;
